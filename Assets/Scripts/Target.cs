@@ -32,6 +32,7 @@ public class Target : MonoBehaviour
         {
             this.GetComponent<MeshRenderer>().material.color = Color.yellow; //change this game object's color to yellow.
         }
+
     }
 
     void OnCollisionEnter(Collision other)
@@ -53,7 +54,7 @@ public class Target : MonoBehaviour
             }
             else if (targetType == TargetType.DestroyableWithSound) //if the target type is DestroyableWithSound...
             {
-                // targetSound.Play(); //play the audio 
+                targetSound.Play(); //play the audio 
                 this.gameObject.SetActive(false); //set this game obejct (the target) to inactive.
             }
 
